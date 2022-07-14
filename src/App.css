@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+header {
+  font-size: large;
+  border-bottom: solid 1px gray;
+}
+
+.login-options {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+justify-content: flex-start;
+}
+
+.login-buttons, .input-boxes{
+  margin-left: 350px;
+  width: 50%;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .input-boxes{
+  width: 50%;
+  margin-left: 350px;
+
+} */
