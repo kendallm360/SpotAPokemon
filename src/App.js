@@ -7,30 +7,31 @@ import React, { Component } from "react";
 
 // import "./Login.css"
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      username: "Lourdes",
-      password: "Jordan",
-    };
-  }
+const App = () => {
+  let validateUser = (username, password) => {
+    if (password === "jordan" && username === "lourdes") {
+      return true;
+    } else {
+      return false;
+    }
+  };
 
-  // validateUser = () => {
-  //   // let steve = console.log("hello");
-  //   this.state.username && this.state.password === formInputs ? return true : retur
-  //   return steve;
-  // };
+  return (
+    <div className="App">
+      {/* <Login /> */}
+      <Form validateUser={validateUser} />
+      {/* <Pokemon /> */}
+    </div>
+  );
+};
 
-  render() {
-    return (
-      <div className="App">
-        {/* <Login /> */}
-        <Form validateUser={this.validateUser} />
-        {/* <Pokemon /> */}
-      </div>
-    );
-  }
-}
+// class App extends Component {
+// constructor() {
+//   super();
+//   this.state = {
+//     username: "",
+//     password: "",
+//   };
+// }
 
 export default App;
