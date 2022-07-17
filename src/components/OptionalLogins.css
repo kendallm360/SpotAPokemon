@@ -1,0 +1,29 @@
+.optionals {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  margin-left: 670px;
+  width: 30%;
+}
+
+.continue-with-button {
+  margin-bottom: 10px;
+  border-radius: 20px;
+  height: 30px;
+}
+
+.facebook {
+  color: white;
+
+  background-color: blue;
+}
+
+.apple {
+  color: white;
+  background-color: black;
+}
+
+.google {
+  color: black;
+  background-color: white;
+}

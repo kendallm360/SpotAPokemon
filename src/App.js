@@ -1,11 +1,11 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Login from "./components/Login";
 import Form from "./components/Form";
-import Pokemon from "./components/Pokemon";
 import React, { Component } from "react";
-
-// import "./Login.css"
+import { Route } from "react-router-dom";
+// import Login from "./components/Login";
+// import OptionalLogins from "./components/OptionalLogins";
+// import Pokemon from "./components/Pokemon";
+// import Header from "./components/Header";
 
 const App = () => {
   let validateUser = (username, password) => {
@@ -18,20 +18,8 @@ const App = () => {
 
   return (
     <div className="App">
-      {/* <Login /> */}
       <Form validateUser={validateUser} />
-      {/* <Pokemon /> */}
     </div>
   );
 };
-
-// class App extends Component {
-// constructor() {
-//   super();
-//   this.state = {
-//     username: "",
-//     password: "",
-//   };
-// }
-
 export default App;

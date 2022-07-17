@@ -1,5 +1,8 @@
 import React, { Component } from "react";
-import Pokemon from "./Pokemon";
+import Pokemon from "./PokemonBucket";
+import Header from "./Header";
+import OptionalLogins from "./OptionalLogins";
+import { Route } from "react-router-dom";
 
 class Form extends Component {
   constructor() {
@@ -18,6 +21,7 @@ class Form extends Component {
   };
 
   login = () => {
+    // event.preventDefault();
     let username = this.state.username;
     let password = this.state.password;
     if (this.props.validateUser(username, password)) {
@@ -29,11 +33,18 @@ class Form extends Component {
 
   render() {
     if (this.login()) {
-      return <Pokemon />;
+      return (
+        <div>
+          <Header />
+          <Pokemon />
+        </div>
+      );
     } else {
       return (
         <div className="inputs">
-          <label>Email address or username</label>
+          <Header />
+          <OptionalLogins />
+          <label className="email">Email address or username</label>
           <input
             className="input-boxes"
             onChange={this.handleChange}
@@ -42,21 +53,32 @@ class Form extends Component {
             type="text"
             placeholder="Email address or username"
           />
-
-          <label>Password</label>
+          <label className="password">Password</label>
           <input
             className="input-boxes"
             onChange={this.handleChange}
             name="password"
             value={this.state.password}
-            type="text"
+            type="password"
             placeholder="Password"
           />
 
-          {/* <a href="">Forget your password?</a>
-                <label>Remember me</label>
-                <input type="checkbox" /> */}
-          <button onClick={this.login}>Log in</button>
+          <a href="">Forget your password?</a>
+          <div className="login-interaction">
+            <input type="checkbox" />
+            <label className="remember-me">Remember me</label>
+            <button
+              className="login-button"
+              onClick={() => {
+                this.login();
+              }}
+            >
+              Log in
+            </button>
+          </div>
+
+          <p>Dont have an account</p>
+          <button className="spotify-button">Signup for spotify</button>
         </div>
       );
     }

@@ -46,12 +46,30 @@ header {
   margin-top: 40px;
   display: flex;
   flex-direction: column;
-justify-content: flex-start;
+  justify-content: flex-start;
+}
+.login-button {
+  background-color: green;
+  border-radius: 20px;
+  height: 35px;
+  width: 20%;
 }
 
-.login-buttons, .input-boxes{
+.login-interaction {
+  border-bottom: solid 1px black;
+  margin: 25px;
+}
+
+.login-buttons {
   margin-left: 350px;
   width: 50%;
+}
+
+.input-boxes {
+  margin-left: 670px;
+  width: 30%;
+  margin-bottom: 10px;
+  height: 30px;
 }
 
 .inputs {
@@ -59,8 +77,38 @@ justify-content: flex-start;
   flex-direction: column;
 }
 
+.email {
+  margin-right: 378px;
+  margin-bottom: 10px;
+}
+
+.password {
+  margin-right: 510px;
+  margin-bottom: 10px;
+}
 /* .input-boxes{
   width: 50%;
   margin-left: 350px;
 
 } */
+.spotify-button {
+  margin-bottom: 10px;
+  border-radius: 20px;
+  height: 30px;
+  margin-left: 670px;
+
+  width: 30%;
+}
+
+.remember-me {
+  font-size: 12px;
+  margin-right: 350px;
+}
+
+.login-interaction {
+  margin-left: 670px;
+
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+}

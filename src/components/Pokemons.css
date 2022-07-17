@@ -1,0 +1,13 @@
+.pokes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: solid 3px red;
+}
+
+.poke-bucket {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
